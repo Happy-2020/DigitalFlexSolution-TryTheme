@@ -4,6 +4,8 @@ import {device} from '../../../theme'
 export const ServicesWrapper = styled.section `
     padding-top: 100px;
     padding-bottom: 90px;
+    background-color: #f6f2ed;
+    color: #666666;
     @media ${device.medium}{
         padding-top: 80px;
         padding-bottom: 70px;

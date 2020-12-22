@@ -101,7 +101,7 @@ const Footer = ({ copyrightStyle, ...props }) => {
                                 <FooterWidgetList>
                                     <li><Text color="textColor" hoverstyle="2">20-22 Wenlock Road</Text></li>
                                     <li><Text color="textColor" hoverstyle="2">N1 7GU</Text></li>
-                                    <li><Text color="textColor" hoverstyle="2">London</Text></li>
+                                    <li><Text color="textColor" hoversty    le="2">London</Text></li>
                                     <li><Anchor path="tel:+4401738506283" color="textColor" hoverstyle="2">(+44)-01738-506283</Anchor></li>
                                     <li><Anchor path="mailto:info@digitalflexsolutions.com" color="textColor" hoverstyle="2">info@digitalflexsolutions.com</Anchor></li>
                                 </FooterWidgetList>

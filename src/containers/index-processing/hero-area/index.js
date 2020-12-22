@@ -10,6 +10,7 @@ import VideoButton from '../../../components/ui/video-button'
 import Image from '../../../components/image'
 import ModalVideo from '../../../components/ui/modal-video'
 import { HeroWrapper, HeroBtnGroup, HeroTextBox, ImageBox } from './hero-area.style'
+// import Carousel from '../../../components/carousel'
 
 const HeroArea = (props) => {
     const HeroData = useStaticQuery(graphql`
@@ -38,6 +39,17 @@ const HeroArea = (props) => {
                       }
                     }
                 }
+                carousel {
+                    image {
+                        childImageSharp {
+                          fluid(maxWidth: 1920, maxHeight: 768, quality: 100) {
+                            ...GatsbyImageSharpFluid_tracedSVG
+                            presentationWidth
+                            presentationHeight
+                          }
+                        }
+                    }
+                }
             }
         }
     `)
@@ -50,7 +62,7 @@ const HeroArea = (props) => {
         setVideoOpen(false)
     }
 
-    const { title, subtitle, text, link, video_link, bg_image, image } = HeroData.indexProcessingJson;
+    const { title, subtitle, text, link, video_link, bg_image, image, carousel } = HeroData.indexProcessingJson;
     const { subtitleStyle, titleStyle, textStyle, btnStyle, videoBtnStyle } = props;
     let video_arr, video_id, video_channel;
     if (video_link) {
@@ -65,20 +77,22 @@ const HeroArea = (props) => {
                     <Row alignitems="center">
                         <Col lg={8} md={7}>
                             <HeroTextBox>
-                                {subtitle && <Heading {...subtitleStyle}>{subtitle}</Heading>}
+                                {/* {subtitle && <Heading {...subtitleStyle}>{subtitle}</Heading>}
                                 {title && <Heading {...titleStyle}>{parse(title)}</Heading>}
-                                {text && <Text {...textStyle}>{text}</Text>}
-                                <HeroBtnGroup>
+                                {text && <Text {...textStyle}>{text}</Text>} */}
+                                {/* <HeroBtnGroup>
                                     {link && <Button to={link} {...btnStyle}>Free Sample</Button>}
                                     {video_link && <VideoButton onClick={modalVideoOpen} {...videoBtnStyle} text="How we work" />}
-                                </HeroBtnGroup>
+                                </HeroBtnGroup> */}
                             </HeroTextBox>
                         </Col>
                         <Col lg={4} md={5}>
-                            <ImageBox>
+                            {/* <ImageBox>
                                 <Image fluid={image.childImageSharp.fluid} />
-                            </ImageBox>
+                            </ImageBox> */}
                         </Col>
+                        {/* <Image fluid={carousel.image.childImageSharp.fluid} /> */}
+                        {/* <Carousel/> */}
                     </Row>
                 </Container>
             </HeroWrapper>

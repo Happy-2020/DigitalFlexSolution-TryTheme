@@ -29,6 +29,7 @@ export const BoxIcontitle = styled.h5`
     font-weight: 500;
     line-height: 1.25;
     margin-bottom: 12px;
+    color: #000000;
 `;
 
 export const BoxIconText = styled.p`

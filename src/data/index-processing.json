@@ -6,36 +6,45 @@
         "text": "Set the trends for desktop & server virtualization technology",
         "link": "/index-processing",
         "video_link": "https://www.youtube.com/watch?v=vqZuSUtczbU",
-        "bg_image": "./images/hero/slider-processing-slide-01-bg.jpg",
-        "image": "./images/hero/slider-processing-slide-01-image-01.png"
+        "bg_image": "./images/hero/slider-processing-slide-02-bg.png",
+        "image": "./images/hero/slider-processing-slide-01-image-01.png",
+        "carousel" : [
+            {
+                "id" : "1",
+                "image" : "./images/carousel/01-Types-Of-Value-Improvement-Projects-We-Target_-min.png"
+            },
+            {
+                "id" : "2",
+                "image" : "./images/carousel/02-What-Do-We-Do_-min.png"
+            },
+            {
+                "id" : "3",
+                "image" : "./images/carousel/03-Reasons-For-Justifying-Any-Technology_-min.png"
+            }
+        ]
     },
     {
         "id": "processing-about-content",
-        "title": "Share the joy of achieving <span>glorious moments</span> & climbed up the top.",
+        "title": "<span>How we work</span>",
         "subtitle": "OUR COMPANY",
         "video_link": "https://www.youtube.com/watch?v=vqZuSUtczbU",
         "faq": [
             {
                 "id": "about-faq-1",
-                "title": "How can we help your business?",
-                "content": "Through the collaboration with customers in discussing needs and demand, we're able to attain mutual understanding, gain customer trust to offer appropriate advice, and bring about suggestions on suitable technology to transform your business. "
+                "title": "How we work?",
+                "content": "Our managed services have been designed to support you business needs and the tehcnology you use by provding the full lifecycle support from set up to configuration and change request. But a significant additional value is our ability to link up the technology your business needs and do this  quickly to accelerate value."
             },
             {
                 "id": "about-faq-2",
-                "title": "What are the advantages of Mitech?",
-                "content": "Mitech takes into consideration every little detail to make sure the system run smoothly and responsively. Mitech employs a new technique called Minified Technology for securing customers' database & building up highly confidential firewalls."
-            },
-            {
-                "id": "about-faq-3",
-                "title": "How working process is simplified?",
-                "content": "We reduce redundant complex calculations and lengthy erroneous code texts with simpler ones to ensure Mitech would run seamlessly and the design is reserved in its best form when viewed from a wide range of mobile devices & browsers."
+                "title": "Our Focus?",
+                "content": "Our focus is to bring control quickly, reduce or remove risks and reduce cost and speed up the delivery of the intended value."
             }
         ],
         "image1": "./images/about-us/home-processing-video-intro-slider-slide-01-image-02.jpg",
         "image2": "./images/about-us/home-processing-video-intro-slider-slide-01-image-03.jpg",
         "image3": "./images/about-us/home-processing-video-intro-slider-slide-01-image-04.jpg",
         "image4": "./images/about-us/home-processing-video-intro-slider-slide-01-image-05.jpg",
-        "main_image": "./images/about-us/video-01-image-01-570x350.jpg"
+        "main_image": "./images/about-us/video-02-image-01-570x350.png"
     },
     {
         "id": "processing-features-content",

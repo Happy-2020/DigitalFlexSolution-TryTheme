@@ -7,6 +7,7 @@ export const HeroWrapper = styled(BackgroundImage) ``;
 export const HeroTextBox = styled.div `
     max-width: 730px;
     width: 100%;
+    min-height : 600px;
     @media ${device.small}{
         margin-top: 60px;
         text-align: center;
