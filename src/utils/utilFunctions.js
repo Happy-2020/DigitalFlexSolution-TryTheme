@@ -18,6 +18,7 @@ const getClosest = function (elem, selector) {
 };
 
 const slugify = function(text) {
+    if (!text) return '';
     return text
       .toString()
       .toLowerCase()

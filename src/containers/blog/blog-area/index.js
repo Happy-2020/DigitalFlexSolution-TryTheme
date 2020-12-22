@@ -5,7 +5,6 @@ import Pagination from '../../../components/blog/pagination'
 import { BlogWrapper, BlogBox } from './blog-area.style'
 
 const BlogArea = ({ blogBoxStyle }) => {
-    const BlogQuery = '';
     // const BlogQuery = useStaticQuery(graphql`
     //     query ListImageBlogQuery {
     //         allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, limit: 6) {
@@ -43,7 +42,6 @@ const BlogArea = ({ blogBoxStyle }) => {
     //                     fields {
     //                         slug
     //                         authorId
-    //                         dateSlug
     //                     }
     //                     excerpt
     //                 }
@@ -51,13 +49,13 @@ const BlogArea = ({ blogBoxStyle }) => {
     //         }
     //     }      
     // `)
-    const blogs = '';// BlogQuery.allMarkdownRemark.edges;
-    const { totalCount } = 0;// BlogQuery.allMarkdownRemark;
+    const blogs = '';//BlogQuery.allMarkdownRemark.edges;
+    const { totalCount } = 0;//BlogQuery.allMarkdownRemark;
     const postsPerPage = 6;
-    const numberOfPages = Math.ceil(totalCount / postsPerPage);
+    const numberOfPages = 0;//Math.ceil(totalCount / postsPerPage);
     return (
         <Fragment>
-            <BlogWrapper>
+            {/* <BlogWrapper>
                 {blogs.map(blog => (
                     <BlogBox key={blog.node.fields.slug}>
                         <Blog content={blog.node} />
@@ -68,7 +66,7 @@ const BlogArea = ({ blogBoxStyle }) => {
                 rootPage="/blog"
                 currentPage={1}
                 numberOfPages={numberOfPages}
-            />
+            /> */}
         </Fragment>
     )
 }
