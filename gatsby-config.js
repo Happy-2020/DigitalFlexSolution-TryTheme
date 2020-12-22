@@ -5,13 +5,13 @@ module.exports = {
   siteMetadata: {
     title: "Digital Flex Solution WebSite",
     titleTemplate: `DFS-Site`,
-    description: `DFS-Site is a .........`,
+    description: `We are a technology team focused on adding value quickly and supporting continual improvement.`,
     author: `@HasThemes`,
     twitterUsername: `@HasThemes`,
     image: 'landing.png',
     siteUrl: 'http://themesmummy.com/mitech/',
     getform: "https://getform.io/f/58c49e90-e767-4e18-959e-4fcd84bf8659",
-    copyright: "Mitech. <a href='https://hasthemes.com/' target='_blank' rel='noopener noreferrer'>All Rights Reserved.</a>",
+    copyright: " December 2020—2021 <a href='https://digitalflexsolutions.com/' target='_blank' rel='noopener noreferrer'>digitalflexsolutions.com</a>",
     social: {
       facebook: "https://www.facebook.com",
       twitter: "https://www.twitter.com",

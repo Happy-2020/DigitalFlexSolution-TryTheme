@@ -2,7 +2,7 @@ import styled, {css} from 'styled-components';
 import {device} from '../../../../theme'
 
 export const FooterWrap = styled.footer `
-    background-color: ${props => props.bgcolor};
+    background-color: ${props => props.bgcolor};  
     ${props => props.reveal === 'true' && css `
         position: fixed;
         bottom: 0;
@@ -25,7 +25,9 @@ export const FooterTop = styled.div `
     }
 `;
 
-export const FooterBottom = styled.div `
+export const FooterBottom = styled.div `  
+    border-top: 1px solid #333333;
+    padding-top: 10px;
     padding-bottom: 30px;
 `;
 
