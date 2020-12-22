@@ -3,9 +3,9 @@
 module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
-    title: "React Gatsby Technology & Blog Template",
-    titleTemplate: `Mitech`,
-    description: `Mitech is a Powerful & flexible Technology And Digital Software Gatsby Template. 06 Stunning Homepages are included in this template. You can use any template or mix content from different home pages for your website.`,
+    title: "Digital Flex Solution WebSite",
+    titleTemplate: `DFS-Site`,
+    description: `DFS-Site is a .........`,
     author: `@HasThemes`,
     twitterUsername: `@HasThemes`,
     image: 'landing.png',

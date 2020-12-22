@@ -5,7 +5,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 export const NavLinkStyled = css`
     display: inline-block;
     position: relative;
-    color: ${props => props.theme.colors.black};
+    color: ${props => props.theme.colors.white};
     font-size: 16px;
     font-weight: 500;
     line-height: 1.18;

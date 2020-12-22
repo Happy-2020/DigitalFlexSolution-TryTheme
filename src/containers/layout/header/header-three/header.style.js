@@ -20,20 +20,17 @@ export const FixedHeader = styled.div `
     width: 100%;
     height: auto;
     transition: ${props => props.theme.transition};
-    background-color: #fff;
+    background-color: #000;
     z-index: 1;
+    padding: 10px 0 10px 0;
     ${props => props.isSticky && css `
-        background-color: #fff !important;
+        background-color: #000 !important;
         position: fixed;
         z-index: 999;
         box-shadow: 0 8px 20px 0 rgba(0,0,0,0.1);
         animation: .95s ease-in-out 0s normal none 1 running ${fadeInDown};
         transition: ${props => props.theme.transition};
-        .search-btn{
-            svg{
-                color: ${props => props.theme.colors.headingColor} !important;
-            }
-        }
+
         .burger-btn{
             span{
                 background-color: ${props => props.theme.colors.headingColor} !important;;

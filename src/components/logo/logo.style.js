@@ -8,7 +8,7 @@ export const LogoWrapper = styled.div `
     padding-bottom: ${props => props.pb};
     a{
         img{
-            width: 160px;
+            width: 200px;
         }
     }
 
