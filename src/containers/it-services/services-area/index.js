@@ -11,21 +11,16 @@ import {SectionWrap, SectionBottom} from './services-area.style'
 const ServicesArea = (props) => {
     const featuredDataQuery = useStaticQuery(graphql `
         query ITServicesQueryData {
-            allItServicesJson(sort: {order: DESC, fields: id}, limit: 6) {
+            allContentfulDfsServicesModelData(sort: {order: DESC, fields: id}, filter: {node_locale: {eq: "en-US"}}) {
                 edges {
                   node {
-                    fields {
-                        slug
-                    }
                     id
                     title
                     excerpt
                     icon {
                       img{
-                        childImageSharp{
-                            fixed(width:100, height: 108, quality: 100 ){
-                                ...GatsbyImageSharpFixed_tracedSVG
-                            }
+                        file {
+                            url
                         }
                       }
                     }
@@ -34,7 +29,7 @@ const ServicesArea = (props) => {
             }
         }
     `); 
-    const featureData = featuredDataQuery.allItServicesJson.edges;
+    const featureData = featuredDataQuery.allContentfulDfsServicesModelData.edges;
     const {linkStyle, headingStyle} = props;
     return (
         <SectionWrap>
@@ -43,7 +38,7 @@ const ServicesArea = (props) => {
                     <Col lg={12}>
                         <SectionTitle
                             subtitle="Our Services"
-                            title="For your very specific industry, <br/> we have <span>highly-tailored IT solutions.</span>"
+                            title="Our Service's <br/><span>Options</span>"
                         />
                     </Col>
                 </Row>
@@ -52,9 +47,9 @@ const ServicesArea = (props) => {
                         <Col lg={4} md={6} className="box-item" key={feature.node.id}>
                             <FeatureBox
                                 title={feature.node.title}
-                                imageSrc={feature.node.icon.img.childImageSharp}
+                                imageSrc={feature.node.icon.img.file.url}
                                 desc={feature.node.excerpt}
-                                path={`/it-service/${feature.node.fields.slug}`}
+                                path={`/it-service/`}
                             />
                         </Col>
                     ))}

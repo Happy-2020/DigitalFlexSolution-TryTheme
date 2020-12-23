@@ -94,7 +94,7 @@ MainMenu.defaultProps = {
         mb: '20px',
         texttransform: 'uppercase'
     }
-} 
+}
 
 // export const MainMenu = ({ headingStyle, menuData, ...props }) => {
 //     const menuarr = menuData;//.allContentfulDfsMainMenu.edges;

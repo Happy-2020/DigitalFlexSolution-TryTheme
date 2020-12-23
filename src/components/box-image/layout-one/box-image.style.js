@@ -111,6 +111,7 @@ export const BoxImgWrapper = styled.div `
     height: ${props => props.height};
     margin-bottom: 28px;
     margin-top: ${props => props.mt};
+    max-height: 500px;
     ${props => props.responsive && css `
         ${props => props.responsive.small && css `
             @media ${device.small}{
