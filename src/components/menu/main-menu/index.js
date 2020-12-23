@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { MdKeyboardArrowDown, MdKeyboardArrowRight } from "react-icons/md";
-import NavBar, { NavItem, NavLink, Submenu, Megamenu } from '../../ui/navbar'
+import NavBar, { NavItem, NavLink, Submenu, Subsubmenu, Megamenu } from '../../ui/navbar'
 import { MainMenuWrap } from './mainmenu.style'
 import Heading from '../../ui/heading'
 
@@ -22,26 +22,26 @@ export const MainMenu = ({ headingStyle, menuData, ...props }) => {
                             {subMenu && (
                                 <Submenu>
                                     {subMenu.map((subitem, i) => {
-                                        const hasSubmenuLevelTwo = subitem.isSubmenu;
+                                        
                                         const submenuLevelTwo = subitem.subMenu;
                                         const submenuIndex = i;
                                         return (
                                             <NavItem key={`submenu-${menu.node.id}-${submenuIndex}`}>
                                                 <NavLink path={subitem.link}>
                                                     <span>{subitem.text}</span>
-                                                    {hasSubmenuLevelTwo && <MdKeyboardArrowRight className="icon" />}
+                                                    {submenuLevelTwo && <MdKeyboardArrowRight className="icon" />}
                                                 </NavLink>
                                                 {submenuLevelTwo && (
-                                                    <Submenu>
+                                                    <Subsubmenu>
                                                         {submenuLevelTwo.map((subitemLevelTwo, j) => {
                                                             const subsubmenuIndex = j;
                                                             return (
-                                                                <NavItem key={`submenu-${menu.node.id}-${submenuIndex}-${subsubmenuIndex}`}>
+                                                                <NavItem key={`subsubmenu-${menu.node.id}-${submenuIndex}-${subsubmenuIndex}`}>
                                                                     <NavLink path={subitemLevelTwo.link}>{subitemLevelTwo.text}</NavLink>
                                                                 </NavItem>
                                                             )
                                                         })}
-                                                    </Submenu>
+                                                    </Subsubmenu>
                                                 )}
                                             </NavItem>
                                         )

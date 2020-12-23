@@ -86,7 +86,7 @@ const Footer = ({ copyrightStyle, ...props }) => {
                                 <Heading as="h6" mt="-3px" mb="20px" color="white">SERVICES</Heading>
                                 <FooterWidgetList>
                                     <li><Anchor path="/digital-marketing-manager-solution/" color="textColor" hoverstyle="2">Digital Marketing Manager</Anchor></li>
-                                    <li><Anchor path="/ai-chartbot/" color="textColor" hoverstyle="2">AI Charbot</Anchor></li>
+                                    <li><Anchor path="/chartbot/" color="textColor" hoverstyle="2">Charbot</Anchor></li>
                                     <li><Anchor path="/process-automation-orchestration-services/" color="textColor" hoverstyle="2">Process Automatin &amp; Orchestration Services</Anchor></li>
                                     <li><Anchor path="/business-intelligence-services/" color="textColor" hoverstyle="2">Business Intelligence Services</Anchor></li>
                                     <li><Anchor path="/ai-ml-services/" color="textColor" hoverstyle="2">Artificial Intelligence and Machine Learning Services</Anchor></li>

@@ -40,6 +40,11 @@ const Header = ({ props, ...styles }) => {
                         subMenu {
                             text
                             link
+                            isSubMenu
+                            subMenu {
+                                text
+                                link
+                            }
                         }
                     }
                 }

@@ -3,6 +3,7 @@ import { NavbarWrap } from '../../ui/navbar/navbar.style'
 import { NavItemWrap } from '../../ui/navbar/navitem/navitem.style'
 import { NavLinkWrap, AnchorTag, SmoothScroll } from '../../ui/navbar/navlink/navlink.style'
 import { SubmenuWrap } from '../../ui/navbar/submenu/submenu.style'
+import { SubsubmenuWrap } from '../../ui/navbar/subsubmenu/subsubmenu.style'
 import { MegamenuWrap } from '../../ui/navbar/megamenu/megamenu.style'
 import { device } from '../../../theme'
 
@@ -89,7 +90,7 @@ export const MainMenuWrap = styled.nav`
             ${props => props.alignment === 'right' && css`
                 &:last-child,
                 :nth-last-child(2){
-                    & > ${SubmenuWrap}{
+                    & > ${SubsubmenuWrap}{
                         left: auto;
                         right: 0;
                     }
