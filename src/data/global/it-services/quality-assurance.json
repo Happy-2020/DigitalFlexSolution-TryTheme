@@ -1,7 +1,7 @@
 {
     "id": "quality-assurance-service",
-    "title": "Quality Assurance System",
-    "excerpt": "At Mitech, we have a holistic and integrated approach towards core modernization to experience technological evolution.",
+    "title": "Data Integration & process Automation",
+    "excerpt": "At Data Integration & process Automation, we have ...",
     "image": "../../images/box-image/image-03-480x298.jpg",
     "icon": {
         "svg": "../../images/icons/linea-basic-case.svg",
@@ -9,7 +9,7 @@
         "img_two": "../../images/icons/icon-04-100x98.png",
         "img_hover": "../../images/icons/icon-04-hover-100x98.png"
     },
-    "is_featured": false,
+    "is_featured": true,
     "banner_image": "../../images/banner/banner-05.jpg",
     "introText": {
         "heading": "Mitech specializes in <span>technological and IT-related services</span> such as product engineering, warranty management, building cloud, infrastructure, network, etc.",

@@ -41,7 +41,7 @@ const BoxIcon = (props) => {
                     {desc && <BoxIconText {...textStyles}>{truncateString(desc, 90)}</BoxIconText>}
                     <BoxIconBtn>
                         <Button to={path} as={Link} {...buttonStyles} icon={<MdTrendingFlat />}>
-                            Discover now
+                            Discover now1
                         </Button>
                     </BoxIconBtn>
                 </BoxIconContent>

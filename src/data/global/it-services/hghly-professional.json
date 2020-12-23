@@ -1,8 +1,8 @@
 {
     "id": "highly-professional-service",
-    "title": "Highly Professional Staffs",
+    "title": "Business Intelligence",
     "tagline": "Reach out to the world’s most reliable IT services.",
-    "excerpt": "Having obtained the official & formal training in IT technology and technical fields, our staffs know best.",
+    "excerpt": "Business Intelligence service is...</br>/////////////////////////////",
     "image": "../../images/box-image/image-06-480x298.jpg",
     "icon": {
         "svg": "../../images/icons/linea-basic-spread-text-bookmark.svg",
@@ -10,7 +10,7 @@
         "img_two": "../../images/icons/icon-06-100x98.png",
         "img_hover": "../../images/icons/icon-06-hover-100x98.png"
     },
-    "is_featured": false,
+    "is_featured": true,
     "banner_image": "../../images/banner/banner-04.jpg",
     "introText": {
         "heading": "Mitech specializes in <span>technological and IT-related services</span> such as product engineering, warranty management, building cloud, infrastructure, network, etc.",

@@ -70,7 +70,7 @@ const Footer = ({ copyrightStyle, ...props }) => {
                         </Col>
                         <Col lg={3} md={5} sm={9}>
                             <FooterWidget responsive={{ medium: { mb: '31px' } }} ml="40px">
-                                <Heading as="h6" mt="-3px" mb="20px">QUICK LINKS</Heading>
+                                <Heading as="h6" mt="-3px" mb="20px" color="white">QUICK LINKS</Heading>
                                 <FooterWidgetList>
                                     <li><Anchor path="/" color="textColor" hoverstyle="2">Home</Anchor></li>
                                     <li><Anchor path="/technologies/" color="textColor" hoverstyle="2">Technologies</Anchor></li>
@@ -83,7 +83,7 @@ const Footer = ({ copyrightStyle, ...props }) => {
                         </Col>
                         <Col lg={3} md={5} sm={9}>
                             <FooterWidget responsive={{ medium: { mb: '27px' } }} ml="40px">
-                                <Heading as="h6" mt="-3px" mb="20px">SERVICES</Heading>
+                                <Heading as="h6" mt="-3px" mb="20px" color="white">SERVICES</Heading>
                                 <FooterWidgetList>
                                     <li><Anchor path="/digital-marketing-manager-solution/" color="textColor" hoverstyle="2">Digital Marketing Manager</Anchor></li>
                                     <li><Anchor path="/ai-chartbot/" color="textColor" hoverstyle="2">AI Charbot</Anchor></li>
@@ -97,7 +97,7 @@ const Footer = ({ copyrightStyle, ...props }) => {
                         </Col>
                         <Col lg={3} md={5} sm={8}>
                             <FooterWidget  ml="40px">
-                                <Heading as="h6" mt="-3px" mb="20px">CONTACT US</Heading>
+                                <Heading as="h6" mt="-3px" mb="20px" color="white">CONTACT US</Heading>
                                 <FooterWidgetList>
                                     <li><Text color="textColor" hoverstyle="2">20-22 Wenlock Road</Text></li>
                                     <li><Text color="textColor" hoverstyle="2">N1 7GU</Text></li>
