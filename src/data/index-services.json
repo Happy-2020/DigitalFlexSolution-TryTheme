@@ -2,10 +2,10 @@
     {
         "id": "services-hero-contnet",
         "title": "Responsive Design",
-        "subtitle": "for IT Services",
+        "subtitle": "Services",
         "desc": "Highly Tailored IT Design, Management & Support Services.",
         "path": "/services",
-        "bg_image": "./images/hero/home-services-hero-bg.jpg"
+        "bg_image": "./images/hero/home-services-hero-bg.png"
     },
     {
         "id": "services-about-contnet",

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import {device} from '../../../theme'
 
 export const SectionWrap = styled.section `
+    padding-top: 30px;
     padding-bottom: 70px;
     background: -webkit-linear-gradient(top, #FFF 0, #F5F5F5 100%);
     @media ${device.medium}{

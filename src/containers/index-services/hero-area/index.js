@@ -35,10 +35,10 @@ const HeroArea = (props) => {
                 <Row>
                     <Col lg={12}>
                         <HeroTextBox>
-                            {title && <Heading {...titleStyle}>{title}</Heading>}
+                            {/* {title && <Heading {...titleStyle}>{title}</Heading>} */}
                             {subtitle && <Heading {...subtitleStyle}>{subtitle}</Heading>}
-                            {path && <Button {...btnStyle} to={path}>IT Services</Button>}
-                            {desc && <Text {...descStyle}>{desc}</Text>}
+                            {/* {path && <Button {...btnStyle} to={path}>IT Services</Button>}
+                            {desc && <Text {...descStyle}>{desc}</Text>} */}
                         </HeroTextBox>
                     </Col>
                 </Row>
