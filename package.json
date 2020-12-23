@@ -9,7 +9,7 @@
     "axios": "^0.19.2",
     "babel-plugin-styled-components": "^1.10.7",
     "bootstrap": "^4.4.1",
-    "core-js": "^3.8.1",
+    "core-js": "^2.6.5",
     "disqus-react": "^1.0.7",
     "gatsby": "^2.29.1",
     "gatsby-background-image": "^0.9.12",
@@ -58,6 +58,7 @@
     "vivus": "^0.4.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
     "@loadable/babel-plugin": "^5.12.0",
     "babel-preset-gatsby": "^0.2.31",
     "prettier": "^1.19.1"
