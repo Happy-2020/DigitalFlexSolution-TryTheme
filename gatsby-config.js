@@ -62,6 +62,7 @@ module.exports = {
     `gatsby-plugin-playground`,
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-loadable-components-ssr',
+    `gatsby-plugin-preact`,
     {
       resolve: `gatsby-plugin-layout`,
       options: {
@@ -200,6 +201,7 @@ module.exports = {
           `/index-services/`,
           `/it-services/`,
           `/it-solutions/`,
+          `/rpa-services/`,
           `/leadership/`,
           `/it-service/*`,
           `/case-study/*`,

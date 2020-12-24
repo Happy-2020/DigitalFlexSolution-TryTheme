@@ -25,7 +25,7 @@ const IndexProcessing = ({ location }) => (
           buttonText="Accept"
           declineButtonText="Decline"
           cookieName="gatsby-gdpr-google-analytics">
-        Hello I am testing cookie asking!
+          Please, check your cookie asking!
     </CookieConsent>
   </Layout>
 )

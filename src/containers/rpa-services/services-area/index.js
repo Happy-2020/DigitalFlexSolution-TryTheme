@@ -3,29 +3,24 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from "gatsby"
 import Heading from '../../../components/ui/heading'
 import Anchor from '../../../components/ui/anchor'
-import {Container, Row, Col} from '../../../components/ui/wrapper'
+import { Container, Row, Col } from '../../../components/ui/wrapper'
 import SectionTitle from '../../../components/ui/section-title'
 import ServiceBox from '../../../components/box-large-image/layout-one'
-import {SectionWrap, SectionBottom} from './services-area.style';
+import { SectionWrap, SectionBottom } from './services-area.style';
 
 const ServicesArea = (props) => {
-    const servicesDataQuery = useStaticQuery(graphql `
-        query ITSolutionsQueryData {
-            allItSolutionsJson(sort: {order: DESC, fields: id}, limit: 6) {
+    const servicesDataQuery = useStaticQuery(graphql`
+        query RpaServicesQueryData {
+            allContentfulDfsServicesModelData(sort: {order: DESC, fields: id}, filter: {node_locale: {eq: "en-US"}}) {
                 edges {
                     node {
                         title
                         id
                         excerpt
-                        fields {
-                            slug
-                        }
-                        image {
-                            childImageSharp {
-                                fluid(maxWidth: 370, maxHeight: 370, quality: 100) {
-                                    ...GatsbyImageSharpFluid_withWebp
-                                    presentationHeight
-                                    presentationWidth
+                        video {
+                            previewImage {
+                                file {
+                                    url
                                 }
                             }
                         }
@@ -34,8 +29,8 @@ const ServicesArea = (props) => {
             }
         }
     `);
-    const services = servicesDataQuery.allItSolutionsJson.edges;
-    const {serviceBoxStyles, linkStyle, headingStyle} = props;
+    const services = servicesDataQuery.allContentfulDfsServicesModelData.edges;
+    const { serviceBoxStyles, linkStyle, headingStyle } = props;
     return (
         <SectionWrap>
             <Container>
@@ -43,7 +38,7 @@ const ServicesArea = (props) => {
                     <Col lg={12}>
                         <SectionTitle
                             subtitle="Our Services"
-                            title="For your very specific industry, <br/> we have <span>highly-tailored IT solutions.</span>"
+                            title="Digital Flex Solution Services"
                         />
                     </Col>
                 </Row>
@@ -54,8 +49,8 @@ const ServicesArea = (props) => {
                                 {...serviceBoxStyles}
                                 title={service.node.title}
                                 desc={service.node.excerpt}
-                                imageSrc={service.node.image.childImageSharp}
-                                path={`/it-solution/${service.node.fields.slug}`}
+                                imageSrc={service.node.video.previewImage.file.url}
+                                path={`/rpa-services/`}
                             />
                         </Col>
                     ))}
