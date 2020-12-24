@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import {NavItem} from './navitem'
 import {NavLink} from './navlink'
 import {Submenu} from './submenu'
-import {Subsubmenu} from './subsubmenu'
 import {Megamenu} from './megamenu'
+import {Babymenu} from './babymenu'
 import {ExpandButton} from './expand-button'
 import {NavbarWrap} from './navbar.style';
 
@@ -21,7 +21,7 @@ NavBar.propTypes = {
 };
 
 
-export {NavItem, NavLink, Submenu, Subsubmenu, Megamenu, ExpandButton}
+export {NavItem, NavLink, Submenu, Megamenu, Babymenu, ExpandButton}
 
 export default NavBar
   

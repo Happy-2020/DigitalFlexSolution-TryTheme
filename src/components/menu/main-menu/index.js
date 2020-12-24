@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { MdKeyboardArrowDown, MdKeyboardArrowRight } from "react-icons/md";
-import NavBar, { NavItem, NavLink, Submenu, Subsubmenu, Megamenu } from '../../ui/navbar'
+import NavBar, { NavItem, NavLink, Submenu, Megamenu, Babymenu } from '../../ui/navbar'
 import { MainMenuWrap } from './mainmenu.style'
 import Heading from '../../ui/heading'
 
@@ -32,16 +32,16 @@ export const MainMenu = ({ headingStyle, menuData, ...props }) => {
                                                     {submenuLevelTwo && <MdKeyboardArrowRight className="icon" />}
                                                 </NavLink>
                                                 {submenuLevelTwo && (
-                                                    <Subsubmenu>
+                                                    <Babymenu>
                                                         {submenuLevelTwo.map((subitemLevelTwo, j) => {
                                                             const subsubmenuIndex = j;
                                                             return (
-                                                                <NavItem key={`subsubmenu-${menu.node.id}-${submenuIndex}-${subsubmenuIndex}`}>
+                                                                <NavItem key={`submenu-${menu.node.id}-${submenuIndex}-${subsubmenuIndex}`}>
                                                                     <NavLink path={subitemLevelTwo.link}>{subitemLevelTwo.text}</NavLink>
                                                                 </NavItem>
                                                             )
                                                         })}
-                                                    </Subsubmenu>
+                                                    </Babymenu>
                                                 )}
                                             </NavItem>
                                         )
