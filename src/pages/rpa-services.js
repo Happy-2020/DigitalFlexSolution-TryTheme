@@ -6,6 +6,7 @@ import Footer from '../containers/layout/footer/footer-one'
 import PageHeader from '../components/pageheader'
 import ServicesArea from '../containers/it-solutions/services-area'
 import JobsArea from '../containers/careers/services-option-area'
+import ClientsArea from '../containers/global/clients-area'
 
 const RPAServicesPage = ({ pageContext, location }) => (
   <Layout location={location}>
@@ -17,6 +18,7 @@ const RPAServicesPage = ({ pageContext, location }) => (
         title="RPA Services"
     />
     <main className="site-wrapper-reveal">
+        <ClientsArea />
         <ServicesArea/>
         <JobsArea />
     </main>
