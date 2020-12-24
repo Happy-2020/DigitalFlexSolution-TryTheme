@@ -19,7 +19,7 @@ const RPAServicesPage = ({ pageContext, location }) => (
         title="RPA Services"
     />
     <main className="site-wrapper-reveal">
-        {/* <ClientsArea /> */}
+        <ClientsArea />
         <ServicesArea/>
         <JobsArea />
     </main>

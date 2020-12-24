@@ -76,7 +76,6 @@ exports.createPages = async ({ graphql, actions }) => {
     const datePage = path.resolve("./src/templates/date-template/date-template.js");
     const searchPage = path.resolve("./src/templates/search-template/search-template.js");
 
-
     const result = '';
     // const result = await graphql(`
     //     {

@@ -1,7 +1,7 @@
 [
     {
         "id": "about-page-header-data",
-        "title": "About Mitech",
+        "title": "About Us",
         "desc": "Mitech specializes in technological and IT-related services such as product engineering, warranty management, building cloud, infrastructure, network, etc.",
         "bg_image": "../images/banner/banner-09.jpg"
     },

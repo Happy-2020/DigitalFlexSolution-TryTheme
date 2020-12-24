@@ -15,12 +15,12 @@ const BlogListLargeImage = ({ pageContext, location, ...restProps }) => {
     const { sectionStyle, headingStyle } = restProps;
     return (
         <Layout location={location}>
-            <SEO title="Blogs" />
+            <SEO title="Blog" />
             <Header />
             <PageHeader
                 pageContext={pageContext}
                 location={location}
-                title="Blog Update"
+                title="Blog"
             />
             <main className="site-wrapper-reveal">
                 <Section {...sectionStyle}>
