@@ -15,6 +15,6 @@ export const SubmenuWrap = styled.ul `
     opacity: 0;
     min-width: 240px;
     padding: 20px 0;
-    z-index: 9;
+    z-index: 100;
     pointer-events: none;
 `;

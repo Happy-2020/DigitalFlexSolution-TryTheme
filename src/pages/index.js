@@ -7,6 +7,7 @@ import HeroArea from '../containers/index-processing/hero-area'
 import AboutArea from '../containers/index-processing/about-area'
 import ServicesArea from '../containers/index-appointment/services-area'
 import FeaturesArea from '../containers/index-infotechno/features-area'
+import CookieConsent from 'react-cookie-consent';
 
 const IndexProcessing = ({ location }) => (
   <Layout location={location}>
@@ -19,6 +20,13 @@ const IndexProcessing = ({ location }) => (
       <FeaturesArea />
     </main>
     <Footer />
+    <CookieConsent
+          location="bottom"
+          buttonText="Accept"
+          declineButtonText="Decline"
+          cookieName="gatsby-gdpr-google-analytics">
+        Hello I am testing cookie asking!
+    </CookieConsent>
   </Layout>
 )
 

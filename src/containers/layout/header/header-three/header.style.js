@@ -21,7 +21,7 @@ export const FixedHeader = styled.div `
     height: auto;
     transition: ${props => props.theme.transition};
     background-color: #000;
-    z-index: 1;
+    z-index: 999;
     padding: 10px 0 10px 0;
     ${props => props.isSticky && css `
         background-color: #000 !important;
@@ -124,7 +124,7 @@ export const HeaderWrap = styled.header `
         left: 0;
         top: 0;
         width: 100%;
-        z-index: 3;
+        z-index: 999;
         ${HeaderTop}{
             background: transparent;
             border-bottom: 1px solid #fff;
