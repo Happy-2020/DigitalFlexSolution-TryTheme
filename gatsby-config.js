@@ -19,10 +19,10 @@ module.exports = {
       linkedin: "https://www.linkedin.com"
     },
     contact: {
-      phone: '190068668',
+      phone: '(+44)-01738-506283',
       address: "58 Howard Street #2 San Francisco, CA 941",
-      email: 'hello@mitech.com',
-      website: "https://hasthemes.com/",
+      email: 'info@digitalflexsolutions.com',
+      website: "https://digitalflexsolutions.com/",
       rating: "4.9",
       customers: "700",
       clients: "3200",

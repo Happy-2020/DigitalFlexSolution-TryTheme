@@ -20,7 +20,7 @@ const ITServicePage = ({ pageContext, location }) => (
     <main className="site-wrapper-reveal">
         <ClientsArea />
         <ServicesArea/>
-        {/* <ContactArea/> */}
+        <ContactArea/>
     </main>
     <Footer/>
   </Layout>
