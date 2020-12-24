@@ -259,14 +259,14 @@ module.exports = {
         useAmpClientIdApi: true,
       },
     },
-    {
-      resolve: 'gatsby-plugin-html2amp',
-      options: {
-        files: ['rpa-services/index.html'],
-        publicPath: 'public',
-        dist: 'public/amp',
-        optimize: true
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-html2amp',
+    //   options: {
+    //     files: ['**/*.html'],
+    //     publicPath: 'public',
+    //     dist: 'public/amp',
+    //     optimize: true
+    //   }
+    // },
   ]
 }

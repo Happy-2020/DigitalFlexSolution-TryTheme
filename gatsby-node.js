@@ -76,133 +76,131 @@ exports.createPages = async ({ graphql, actions }) => {
     const datePage = path.resolve("./src/templates/date-template/date-template.js");
     const searchPage = path.resolve("./src/templates/search-template/search-template.js");
 
-    const result = '';
-    // const result = await graphql(`
-    //     {
-    //         allItServicesJson {
-    //             edges {
-    //                 node {
-    //                     fields {
-    //                         slug
-    //                     }
-    //                 }
-    //             }
-    //         }  
-    //         allItSolutionsJson {
-    //             edges {
-    //                 node {
-    //                     fields {
-    //                         slug
-    //                     }
-    //                 }
-    //             }
-    //         }  
-    //         allCaseStudiesJson{
-    //             edges {
-    //                 node {
-    //                     fields{
-    //                         slug
-    //                     }
-    //                 }
-    //                 next {
-    //                     fields{
-    //                         slug
-    //                     }
-    //                     id
-    //                     title
-    //                     image {
-    //                       childImageSharp {
-    //                         fixed(width: 120, height: 80, quality: 100) {
-    //                           src
-    //                           width
-    //                           height
-    //                         }
-    //                       }
-    //                     }
-    //                 }
-    //                 previous{
-    //                     fields{
-    //                         slug
-    //                     }
-    //                     id
-    //                     title
-    //                     image {
-    //                       childImageSharp {
-    //                         fixed(width: 120, height: 80, quality: 100) {
-    //                           src
-    //                           width
-    //                           height
-    //                         }
-    //                       }
-    //                     }
-    //                 }
-    //             }
-    //         }  
-    //         allMarkdownRemark {
-    //             edges {
-    //                 node {
-    //                     fields {
-    //                         slug
-    //                         authorId
-    //                         dateSlug
-    //                     }
-    //                     frontmatter {
-    //                         tags
-    //                         categories
-    //                         date(formatString: "LL")
-    //                     }
-    //                 }
-    //                 next {
-    //                     frontmatter {
-    //                         title
-    //                         featured_image {
-    //                             childImageSharp {
-    //                                 fluid(maxWidth: 720, maxHeight: 120, quality: 100) {
-    //                                     src
-    //                                     presentationWidth
-    //                                     presentationHeight
-    //                                 }
-    //                             }
-    //                         }
-    //                     }
-    //                     fields {
-    //                         slug
-    //                     }
-    //                 }
-    //                 previous {
-    //                     frontmatter {
-    //                         title
-    //                         featured_image {
-    //                             childImageSharp {
-    //                                 fluid(maxWidth: 720, maxHeight: 120, quality: 100) {
-    //                                     src
-    //                                     presentationWidth
-    //                                     presentationHeight
-    //                                 }
-    //                             }
-    //                         }
-    //                     }
-    //                     fields {
-    //                         slug
-    //                     }
-    //                 }
-    //             }
-    //         }       
-    //     }
-    // `);
+    const result = await graphql(`
+        {
+            allItServicesJson {
+                edges {
+                    node {
+                        fields {
+                            slug
+                        }
+                    }
+                }
+            }  
+            allItSolutionsJson {
+                edges {
+                    node {
+                        fields {
+                            slug
+                        }
+                    }
+                }
+            }  
+            allCaseStudiesJson{
+                edges {
+                    node {
+                        fields{
+                            slug
+                        }
+                    }
+                    next {
+                        fields{
+                            slug
+                        }
+                        id
+                        title
+                        image {
+                          childImageSharp {
+                            fixed(width: 120, height: 80, quality: 100) {
+                              src
+                              width
+                              height
+                            }
+                          }
+                        }
+                    }
+                    previous{
+                        fields{
+                            slug
+                        }
+                        id
+                        title
+                        image {
+                          childImageSharp {
+                            fixed(width: 120, height: 80, quality: 100) {
+                              src
+                              width
+                              height
+                            }
+                          }
+                        }
+                    }
+                }
+            }  
+            allMarkdownRemark {
+                edges {
+                    node {
+                        fields {
+                            slug
+                            authorId
+                        }
+                        frontmatter {
+                            tags
+                            categories
+                            date(formatString: "LL")
+                        }
+                    }
+                    next {
+                        frontmatter {
+                            title
+                            featured_image {
+                                childImageSharp {
+                                    fluid(maxWidth: 720, maxHeight: 120, quality: 100) {
+                                        src
+                                        presentationWidth
+                                        presentationHeight
+                                    }
+                                }
+                            }
+                        }
+                        fields {
+                            slug
+                        }
+                    }
+                    previous {
+                        frontmatter {
+                            title
+                            featured_image {
+                                childImageSharp {
+                                    fluid(maxWidth: 720, maxHeight: 120, quality: 100) {
+                                        src
+                                        presentationWidth
+                                        presentationHeight
+                                    }
+                                }
+                            }
+                        }
+                        fields {
+                            slug
+                        }
+                    }
+                }
+            }       
+        }
+    `);
 
     // Create Single IT Service page
 
-    const itservices = '';//result.data.allItServicesJson.edges;
-    // itservices.forEach(({ node }) => {
-    //     createPage({
-    //         path: `it-service/${node.fields.slug}`,
-    //         component: servicePage,
-    //         context: {
-    //             slug: node.fields.slug
-    //         }
-    //     })
-    // });
+    const itservices = result.data.allItServicesJson.edges;
+    itservices.forEach(({ node }) => {
+        createPage({
+            path: `it-service/${node.fields.slug}`,
+            component: servicePage,
+            context: {
+                slug: node.fields.slug
+            }
+        })
+    });
 
     // Create Single IT Solution page
     const itsolutions = '';
