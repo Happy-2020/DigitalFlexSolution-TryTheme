@@ -36,7 +36,7 @@ export const MainMenu = ({ headingStyle, menuData, ...props }) => {
                                                         {submenuLevelTwo.map((subitemLevelTwo, j) => {
                                                             const subsubmenuIndex = j;
                                                             return (
-                                                                <NavItem key={`submenu-${menu.node.id}-${submenuIndex}-${subsubmenuIndex}`}>
+                                                                <NavItem key={`babymenu-${menu.node.id}-${submenuIndex}-${subsubmenuIndex}`}>
                                                                     <NavLink path={subitemLevelTwo.link}>{subitemLevelTwo.text}</NavLink>
                                                                 </NavItem>
                                                             )

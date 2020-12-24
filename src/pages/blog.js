@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import SEO from "../components/seo"
 import Layout from '../containers/layout/layout'
-import Header from '../containers/layout/header/header-one'
+import Header from '../containers/layout/header/header-three'
 import Footer from '../containers/layout/footer/footer-one'
 import PageHeader from '../components/pageheader'
 import Section, { Row, Col } from '../components/ui/wrapper'

@@ -30,7 +30,7 @@ import {
 const Header = ({ props, ...styles }) => {
     const headerData = useStaticQuery(graphql`
         query HeaderThreeDataQuery {
-            allContentfulDfsMainMenu(sort: {fields: createdAt, order: ASC}, filter: {node_locale: {eq: "en-US"}}) {
+            allContentfulDfsMainMenu(sort: {fields: index, order: ASC}, filter: {node_locale: {eq: "en-US"}}) {
                 edges {
                     node {
                         id

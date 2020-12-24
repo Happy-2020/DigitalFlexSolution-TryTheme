@@ -273,8 +273,8 @@ export const MainMenuWrap = styled.nav`
     ${props => props.layout === 3 && css`
         ${NavbarWrap}{
             & > ${NavItemWrap}{
-                margin-left: 24px;
-                margin-right: 24px;
+                margin-left: 14px;
+                margin-right: 14px;
                 & > ${NavLinkWrap},
                 & > ${AnchorTag},
                 & > ${SmoothScroll}{
@@ -310,8 +310,8 @@ export const MainMenuWrap = styled.nav`
     ${props => props.layout === 4 && css`
         ${NavbarWrap}{
             & > ${NavItemWrap}{
-                margin-left: 24px;
-                margin-right: 24px;
+                margin-left: 14px;
+                margin-right: 14px;
                 & > ${NavLinkWrap},
                 & > ${AnchorTag},
                 & > ${SmoothScroll}{
