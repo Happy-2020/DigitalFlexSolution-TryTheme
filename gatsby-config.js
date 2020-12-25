@@ -233,40 +233,6 @@ module.exports = {
         // Defines the environments where the tracking should be available  - default is ["production"]
         environments: ['production', 'development'],
       },
-    },
-    {
-      resolve: `gatsby-plugin-amp`,
-      options: {
-        // analytics: {
-        //   type: 'gtag',
-        //   dataCredentials: 'include',
-        //   config: {
-        //     vars: {
-        //       gtag_id: <GA_TRACKING_ID>,
-        //       config: {
-        //         <GA_TRACKING_ID>: {
-        //           page_location: '{{pathname}}'
-        //         },
-        //       },
-        //     },
-        //   },
-        // },
-        canonicalBaseUrl: 'http://www.example.com/',
-        components: ['amp-form'],
-        excludedPaths: ['/404*', '/'],
-        pathIdentifier: '/public/amp/',
-        relAmpHtmlPattern: '{{canonicalBaseUrl}}{{pathname}}{{pathIdentifier}}',
-        useAmpClientIdApi: true,
-      },
-    },
-    // {
-    //   resolve: 'gatsby-plugin-html2amp',
-    //   options: {
-    //     files: ['**/*.html'],
-    //     publicPath: 'public',
-    //     dist: 'public/amp',
-    //     optimize: true
-    //   }
-    // },
+    },    
   ]
 }

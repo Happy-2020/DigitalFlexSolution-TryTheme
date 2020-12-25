@@ -190,7 +190,6 @@ exports.createPages = async ({ graphql, actions }) => {
     `);
 
     // Create Single IT Service page
-
     const itservices = result.data.allItServicesJson.edges;
     itservices.forEach(({ node }) => {
         createPage({
@@ -203,41 +202,37 @@ exports.createPages = async ({ graphql, actions }) => {
     });
 
     // Create Single IT Solution page
-    const itsolutions = '';
-    // const itsolutions = result.data.allItSolutionsJson.edges;
-    // itsolutions.forEach(({ node }) => {
-    //     createPage({
-    //         path: `it-solution/${node.fields.slug}`,
-    //         component: solutionPage,
-    //         context: {
-    //             slug: node.fields.slug
-    //         }
-    //     })
-    // });
+    const itsolutions = result.data.allItSolutionsJson.edges;
+    itsolutions.forEach(({ node }) => {
+        createPage({
+            path: `it-solution/${node.fields.slug}`,
+            component: solutionPage,
+            context: {
+                slug: node.fields.slug
+            }
+        })
+    });
 
     // Create Single Case Study Page
-
-    const caseStudies = '';
-    // const caseStudies = result.data.allCaseStudiesJson.edges;
-    // caseStudies.forEach(({ node, next, previous }) => {
-    //     createPage({
-    //         path: `case-study/${node.fields.slug}`,
-    //         component: caseStudyPage,
-    //         context: {
-    //             slug: node.fields.slug,
-    //             next,
-    //             previous
-    //         }
-    //     })
-    // });
+    const caseStudies = result.data.allCaseStudiesJson.edges;
+    caseStudies.forEach(({ node, next, previous }) => {
+        createPage({
+            path: `case-studies/${node.fields.slug}`,
+            component: caseStudyPage,
+            context: {
+                slug: node.fields.slug,
+                next,
+                previous
+            }
+        })
+    });
 
     // Create Single Blog Page
-
     const posts = '';
     // const posts = result.data.allMarkdownRemark.edges;
     // posts.forEach(({ node, next, previous }) => {
     //     createPage({
-    //         path: node.fields.slug,
+    //         path: `${node.fields.slug}`,
     //         component: singleBlogPage,
     //         context: {
     //             slug: node.fields.slug,
