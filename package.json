@@ -14,6 +14,7 @@
     "gatsby": "^2.29.1",
     "gatsby-background-image": "^0.9.12",
     "gatsby-image": "^2.2.37",
+    "gatsby-plugin-amp": "^0.2.2",
     "gatsby-plugin-breadcrumb": "^6.2.3",
     "gatsby-plugin-gdpr-cookies": "^1.0.11",
     "gatsby-plugin-layout": "^1.1.22",

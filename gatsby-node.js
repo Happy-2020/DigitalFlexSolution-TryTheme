@@ -68,6 +68,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const servicePage = path.resolve("./src/templates/service-template/service-template.js")
     const solutionPage = path.resolve("./src/templates/it-solution-template/it-solution-template.js")
     const caseStudyPage = path.resolve("./src/templates/case-study-template/case-study-template.js")
+    const caseStudyPageAmp = path.resolve("./src/templates/case-study-template-amp/case-study-template-amp.js")
     const singleBlogPage = path.resolve("./src/templates/blog-template/blog-template.js")
     const blogList = path.resolve("./src/templates/blog-list/blog-list.js");
     const tagPage = path.resolve("./src/templates/tag-template/tag-template.js");
@@ -219,6 +220,20 @@ exports.createPages = async ({ graphql, actions }) => {
         createPage({
             path: `case-studies/${node.fields.slug}`,
             component: caseStudyPage,
+            context: {
+                slug: node.fields.slug,
+                next,
+                previous
+            }
+        })
+    });
+
+    // Create Single Case Study Page Amp
+    const caseStudiesAmp = result.data.allCaseStudiesJson.edges;
+    caseStudiesAmp.forEach(({ node, next, previous }) => {
+        createPage({
+            path: `case-studies/${node.fields.slug}/amp`,
+            component: caseStudyPageAmp,
             context: {
                 slug: node.fields.slug,
                 next,
