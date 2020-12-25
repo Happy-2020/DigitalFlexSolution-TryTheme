@@ -232,7 +232,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const caseStudiesAmp = result.data.allCaseStudiesJson.edges;
     caseStudiesAmp.forEach(({ node, next, previous }) => {
         createPage({
-            path: `case-studies/${node.fields.slug}/amp`,
+            path: `case-studies/amp/${node.fields.slug}`,
             component: caseStudyPageAmp,
             context: {
                 slug: node.fields.slug,
