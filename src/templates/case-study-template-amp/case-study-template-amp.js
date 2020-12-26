@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types'
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import SEO from "../../components/seo"
 import Layout from '../../containers/layout/layout'
 import Header from '../../containers/layout/header/header-one'
@@ -81,7 +82,7 @@ const CaseStudyTemplate = ({ data, pageContext: { next, previous }, location, ..
                             <Row justify="center">
                                 <Col lg={10}>
                                     <BannerTextWrap>
-                                        {pageData.logo && <amp-img fixed={pageData.logo.childImageSharp.fixed} alt={pageData.title} layout="responsive"/>}
+                                        {pageData.logo && <Img fixed={pageData.logo.childImageSharp.fixed} alt={pageData.title} />}
                                         {pageData.tagline && <Heading {...taglineStyle}>{pageData.tagline}</Heading>}
                                     </BannerTextWrap>
                                 </Col>

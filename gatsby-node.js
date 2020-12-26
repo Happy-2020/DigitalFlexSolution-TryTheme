@@ -65,18 +65,29 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
 
-    const servicePage = path.resolve("./src/templates/service-template/service-template.js")
-    const solutionPage = path.resolve("./src/templates/it-solution-template/it-solution-template.js")
-    const caseStudyPage = path.resolve("./src/templates/case-study-template/case-study-template.js")
-    const caseStudyPageAmp = path.resolve("./src/templates/case-study-template-amp/case-study-template-amp.js")
-    const caseStudyIndexAmp = path.resolve("./src/templates/case-studies-amp.js")
-    const singleBlogPage = path.resolve("./src/templates/blog-template/blog-template.js")
+    const servicePage = path.resolve("./src/templates/service-template/service-template.js");
+    const solutionPage = path.resolve("./src/templates/it-solution-template/it-solution-template.js");
+    const caseStudyPage = path.resolve("./src/templates/case-study-template/case-study-template.js");
+    const singleBlogPage = path.resolve("./src/templates/blog-template/blog-template.js");
     const blogList = path.resolve("./src/templates/blog-list/blog-list.js");
     const tagPage = path.resolve("./src/templates/tag-template/tag-template.js");
     const categoryPage = path.resolve("./src/templates/category-template/category-template.js");
     const authorPage = path.resolve("./src/templates/author-template/author-template.js");
     const datePage = path.resolve("./src/templates/date-template/date-template.js");
     const searchPage = path.resolve("./src/templates/search-template/search-template.js");
+    
+    const indexIndexAmp = path.resolve("./src/templates/index-amp.js");
+    const serviceIndexAmp = path.resolve("./src/templates/services-amp.js");
+    const servicePageAmp = path.resolve("./src/templates/service-template-amp/service-template-amp.js");
+    const solutionPageAmp = path.resolve("./src/templates/it-solution-template-amp/it-solution-template-amp.js");
+    const rpaservicesIndexAmp = path.resolve("./src/templates/rpa-services-amp.js");
+    const technologiesIndexAmp = path.resolve("./src/templates/technologies-amp.js");
+    const caseStudyPageAmp = path.resolve("./src/templates/case-study-template-amp/case-study-template-amp.js");
+    const caseStudyIndexAmp = path.resolve("./src/templates/case-studies-amp.js");
+    const blogIndexAmp = path.resolve("./src/templates/blog-amp.js");
+    const aboutusIndexAmp = path.resolve("./src/templates/about-us-amp.js");
+    const contactusIndexAmp = path.resolve("./src/templates/contact-us-amp.js");
+    const n404IndexAmp = path.resolve("./src/templates/404-amp.js");
 
     const result = await graphql(`
         {
@@ -229,34 +240,6 @@ exports.createPages = async ({ graphql, actions }) => {
         })
     });
 
-    // Create Single Case Study Page Amp
-    const caseStudiesAmp = result.data.allCaseStudiesJson.edges;
-    caseStudiesAmp.forEach(({ node, next, previous }) => {
-        createPage({
-            path: `case-studies/amp/${node.fields.slug}`,
-            component: caseStudyPageAmp,
-            context: {
-                slug: node.fields.slug,
-                next,
-                previous
-            }
-        })
-    });
-
-    // Create Single Case Study Index Amp
-    const caseStudiesIndexAmp = result.data.allCaseStudiesJson.edges;
-    caseStudiesIndexAmp.forEach(({ node, next, previous }) => {
-        createPage({
-            path: `case-studies/amp/`,
-            component: caseStudyIndexAmp,
-            context: {
-                slug: node.fields.slug,
-                next,
-                previous
-            }
-        })
-    });
-
     // Create Single Blog Page
     const posts = '';
     // const posts = result.data.allMarkdownRemark.edges;
@@ -383,5 +366,105 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
         path: '/search',
         component: searchPage,
+    })
+
+    // Create home Index Amp
+    createPage({
+        path: `amp/`,
+        component: indexIndexAmp,
+    })
+
+    // Create services Index Amp
+    createPage({
+        path: `services/amp/`,
+        component: serviceIndexAmp,
+    })
+
+    // Create Single IT Service page Amp
+    const itservicesAmp = result.data.allItServicesJson.edges;
+    itservicesAmp.forEach(({ node }) => {
+        createPage({
+            path: `it-service/amp/${node.fields.slug}`,
+            component: servicePageAmp,
+            context: {
+                slug: node.fields.slug
+            }
+        })
+    });
+
+    // Create Single IT Solution page Amp
+    const itsolutionsAmp = result.data.allItSolutionsJson.edges;
+    itsolutionsAmp.forEach(({ node }) => {
+        createPage({
+            path: `it-solution/amp/${node.fields.slug}`,
+            component: solutionPageAmp,
+            context: {
+                slug: node.fields.slug
+            }
+        })
+    });
+
+    // Create rpa-services Index Amp
+    createPage({
+        path: `rpa-services/amp/`,
+        component: rpaservicesIndexAmp,
+    })
+
+    // Create technologies Index Amp
+    createPage({
+        path: `technologies/amp/`,
+        component: technologiesIndexAmp,
+    })
+
+    // Create Single Case Study Index Amp
+    const caseStudiesIndexAmp = result.data.allCaseStudiesJson.edges;
+    caseStudiesIndexAmp.forEach(({ node, next, previous }) => {
+        createPage({
+            path: `case-studies/amp/`,
+            component: caseStudyIndexAmp,
+            context: {
+                slug: node.fields.slug,
+                next,
+                previous
+            }
+        })
+    });
+
+    // Create Single Case Study Page Amp
+    const caseStudiesAmp = result.data.allCaseStudiesJson.edges;
+    caseStudiesAmp.forEach(({ node, next, previous }) => {
+        createPage({
+            path: `case-studies/amp/${node.fields.slug}`,
+            component: caseStudyPageAmp,
+            context: {
+                slug: node.fields.slug,
+                next,
+                previous
+            }
+        })
+    });
+
+    // Create blog Index Amp
+    createPage({
+        path: `blog/amp/`,
+        component: blogIndexAmp,
+    })
+
+    // Create about us Index Amp
+    createPage({
+        path: `about-us/amp/`,
+        component: aboutusIndexAmp,
+    })
+
+    // Create contact us Index Amp
+    createPage({
+        path: `contact-us/amp/`,
+        component: contactusIndexAmp,
+    })
+
+    // Create 404 Index Amp
+    createPage({
+        path: `404/amp/`,
+        component: n404IndexAmp,
     })
 }
