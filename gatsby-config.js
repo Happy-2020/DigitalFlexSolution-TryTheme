@@ -9,7 +9,7 @@ module.exports = {
     author: `@HasThemes`,
     twitterUsername: `@HasThemes`,
     image: 'landing.png',
-    siteUrl: 'http://themesmummy.com/mitech/',
+    siteUrl: 'https://digitalflexsolutiontrythememas.gtsb.io/',
     getform: "https://getform.io/f/58c49e90-e767-4e18-959e-4fcd84bf8659",
     copyright: " December 2020—2021 <a href='https://digitalflexsolutions.com/' target='_blank' rel='noopener noreferrer'>digitalflexsolutions.com</a>",
     social: {
@@ -182,8 +182,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'http://themesmummy.com/mitech',
-        sitemap: 'http://themesmummy.com/mitech/sitemap.xml',
+        host: 'https://digitalflexsolutiontrythememas.gtsb.io/',
+        sitemap: 'https://digitalflexsolutiontrythememas.gtsb.io/dfssitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
       }
     },
@@ -258,6 +258,42 @@ module.exports = {
         relAmpHtmlPattern: '{{canonicalBaseUrl}}{{pathname}}{{pathIdentifier}}',
         useAmpClientIdApi: true,
       },
-    },    
+    }, 
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/dfssitemap.xml`,
+        // Exclude specific pages or groups of pages using glob parameters
+        // See: https://github.com/isaacs/minimatch
+        // The example below will exclude the single `path/to/page` and all routes beginning with `category`
+        exclude: [`/case-studies/*`, `/path/to/page`],
+        // query: `
+        //   {
+        //     wp {
+        //       generalSettings {
+        //         siteUrl
+        //       }
+        //     }
+  
+        //     allSitePage {
+        //       nodes {
+        //         path
+        //       }
+        //     }
+        // }`,
+        // resolveSiteUrl: ({site, allSitePage}) => {
+        //   //Alternatively, you may also pass in an environment variable (or any location) at the beginning of your `gatsby-config.js`.
+        //   return site.wp.generalSettings.siteUrl
+        // },
+        // serialize: ({ site, allSitePage }) =>
+        //   allSitePage.nodes.map(node => {
+        //     return {
+        //       url: `${site.wp.generalSettings.siteUrl}${node.path}`,
+        //       changefreq: `daily`,
+        //       priority: 0.7,
+        //     }
+        //   })
+      }
+    },   
   ]
 }
