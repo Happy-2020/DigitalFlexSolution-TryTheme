@@ -88,6 +88,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const aboutusIndexAmp = path.resolve("./src/templates/about-us-amp.js");
     const contactusIndexAmp = path.resolve("./src/templates/contact-us-amp.js");
     const n404IndexAmp = path.resolve("./src/templates/404-amp.js");
+    const searchPageAmp = path.resolve("./src/templates/search-template-amp/search-template-amp.js");
 
     const result = await graphql(`
         {
@@ -368,6 +369,10 @@ exports.createPages = async ({ graphql, actions }) => {
         component: searchPage,
     })
 
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////// AMP Create ///////////////////////////////////////////////////////////////
+
     // Create home Index Amp
     createPage({
         path: `amp/`,
@@ -466,5 +471,11 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
         path: `404/amp/`,
         component: n404IndexAmp,
+    })
+
+    // Create Search Page Amp
+    createPage({
+        path: '/search/amp/',
+        component: searchPageAmp,
     })
 }
