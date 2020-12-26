@@ -17,7 +17,7 @@ const CaseStudiesPage = ({ pageContext, location }) => (
             title="Case Studies"
         />
         <main className="site-wrapper-reveal">
-            <CaseStudyArea />
+            <CaseStudyArea /> 
             <CTAArea />
         </main>
         <Footer />
