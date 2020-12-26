@@ -229,19 +229,19 @@ exports.createPages = async ({ graphql, actions }) => {
         })
     });
 
-    // // Create Single Case Study Page Amp
-    // const caseStudiesAmp = result.data.allCaseStudiesJson.edges;
-    // caseStudiesAmp.forEach(({ node, next, previous }) => {
-    //     createPage({
-    //         path: `case-studies/amp/${node.fields.slug}`,
-    //         component: caseStudyPageAmp,
-    //         context: {
-    //             slug: node.fields.slug,
-    //             next,
-    //             previous
-    //         }
-    //     })
-    // });
+    // Create Single Case Study Page Amp
+    const caseStudiesAmp = result.data.allCaseStudiesJson.edges;
+    caseStudiesAmp.forEach(({ node, next, previous }) => {
+        createPage({
+            path: `case-studies/amp/${node.fields.slug}`,
+            component: caseStudyPageAmp,
+            context: {
+                slug: node.fields.slug,
+                next,
+                previous
+            }
+        })
+    });
 
     // Create Single Case Study Index Amp
     const caseStudiesIndexAmp = result.data.allCaseStudiesJson.edges;

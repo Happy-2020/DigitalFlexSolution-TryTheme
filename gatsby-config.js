@@ -234,23 +234,34 @@ module.exports = {
         environments: ['production', 'development'],
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-amp`,
+    //   options: {
+    //     // analytics: {
+    //     //   type: 'gtag',
+    //     //   dataCredentials: 'include',
+    //     //   config: {
+    //     //     vars: {
+    //     //       gtag_id: <GA_TRACKING_ID>,
+    //     //       config: {
+    //     //         <GA_TRACKING_ID>: {
+    //     //           page_location: '{{pathname}}'
+    //     //         },
+    //     //       },
+    //     //     },
+    //     //   },
+    //     // },
+    //     canonicalBaseUrl: 'https://digitalflexsolutiontrythememas.gtsb.io/',
+    //     components: ['amp-img'],
+    //     excludedPaths: ['/404*', '/'],
+    //     pathIdentifier: 'amp/',
+    //     relAmpHtmlPattern: '{{canonicalBaseUrl}}{{pathname}}{{pathIdentifier}}',
+    //     useAmpClientIdApi: true,
+    //   },
+    // }, 
     {
-      resolve: `gatsby-plugin-amp`,
+      resolve: `gatsby-plugin-google-amp`,
       options: {
-        // analytics: {
-        //   type: 'gtag',
-        //   dataCredentials: 'include',
-        //   config: {
-        //     vars: {
-        //       gtag_id: <GA_TRACKING_ID>,
-        //       config: {
-        //         <GA_TRACKING_ID>: {
-        //           page_location: '{{pathname}}'
-        //         },
-        //       },
-        //     },
-        //   },
-        // },
         canonicalBaseUrl: 'https://digitalflexsolutiontrythememas.gtsb.io/',
         components: ['amp-img'],
         excludedPaths: ['/404*', '/'],
